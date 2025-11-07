@@ -1,0 +1,1559 @@
+/* ============================================
+   기본 스타일 리셋
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    background-image: linear-gradient(to bottom, #fafbfc 0%, #f5f7fa 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   헤더 - E2BS 스타일 (흰색 배경, 고정)
+   ============================================ */
+.header {
+    background-color: white !important;
+    color: #333 !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    transition: box-shadow 0.3s ease;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.header.sticky-shadow {
+    box-shadow: 0px 10px 27px 3px rgba(221, 221, 221, 0.4);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #1e88e5 !important;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222 !important;
+    margin: 0 !important;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #333 !important;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+    background: transparent !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #1e88e5 !important;
+    color: white !important;
+}
+
+.user-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user-info {
+    color: #333 !important;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   로그인 화면 - 은행 스타일 참고 (부드러운 그라데이션)
+   ============================================ */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+    padding: 2rem;
+    padding-top: 100px !important; /* 헤더 높이만큼 여백 */
+    position: relative;
+    z-index: 1 !important; /* 헤더보다 낮은 z-index */
+    margin-top: 0 !important;
+}
+
+.login-container.hidden {
+    display: none !important;
+}
+
+.login-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header i {
+    font-size: 4rem;
+    color: #1e88e5;
+    margin-bottom: 1rem;
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.login-actions {
+    margin-bottom: 2rem;
+}
+
+.login-features {
+    text-align: left;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    border: 1px solid #dee2e6;
+}
+
+.login-features h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.login-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.login-features li {
+    padding: 0.5rem 0;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.login-features li i {
+    color: #1e88e5;
+    margin-right: 0.75rem;
+    width: 24px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* ============================================
+   버튼 스타일
+   ============================================ */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1e88e5;
+    border: 2px solid #1e88e5;
+}
+
+.btn-outline:hover {
+    background: #1e88e5;
+    color: white;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    min-width: 150px;
+}
+
+/* ============================================
+   메인 콘텐츠
+   ============================================ */
+.main {
+    min-height: calc(100vh - 80px);
+    padding: 2rem 0;
+    margin-top: 80px !important; /* 헤더 높이만큼 여백 */
+    background-color: #f5f7fa;
+    background-image: linear-gradient(to bottom, #fafbfc 0%, #f5f7fa 100%);
+}
+
+.main.hidden {
+    display: none !important;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* ============================================
+   대시보드
+   ============================================ */
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e8ecef;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-color: #1e88e5;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.25);
+}
+
+.stat-content h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.stat-content p {
+    color: #7f8c8d;
+}
+
+.subscription-preview {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8ecef;
+}
+
+.subscription-preview h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.subscription-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ============================================
+   구독 항목 - Drag & Drop 지원
+   ============================================ */
+.subscription-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 3rem;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #1e88e5;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    cursor: move;
+    position: relative;
+    border: 1px solid #e8ecef;
+}
+
+.subscription-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #1e88e5;
+}
+
+.subscription-item::before {
+    content: '⋮⋮';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 1.2rem;
+    cursor: grab;
+    user-select: none;
+    line-height: 1;
+}
+
+.subscription-item:active::before {
+    cursor: grabbing;
+}
+
+.subscription-item.dragging {
+    opacity: 0.6;
+    transform: scale(0.98);
+    box-shadow: 0 4px 20px rgba(30, 136, 229, 0.3);
+}
+
+.subscription-item.drag-over {
+    border: 2px dashed #1e88e5;
+    background-color: #e3f2fd;
+}
+
+.subscription-item.drag-over-top::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #1e88e5;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.subscription-item.drag-over-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #1e88e5;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+
+.subscription-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.subscription-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.25);
+}
+
+.subscription-details h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.subscription-details p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.subscription-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.subscription-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+/* ============================================
+   섹션 헤더
+   ============================================ */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-controls select,
+.filter-controls input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* ============================================
+   달력
+   ============================================ */
+.calendar-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8ecef;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e8ecef;
+}
+
+.calendar-header button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.calendar-header button:hover {
+    background: #e3f2fd;
+    border-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+.month-year-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.month-year-selector h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.selector-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.year-select,
+.month-select {
+    padding: 0.625rem 1.25rem;
+    border: 2px solid #e8ecef;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e88e5' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+    min-width: 120px;
+}
+
+.year-select:hover,
+.month-select:hover {
+    border-color: #1e88e5;
+    background-color: #f8f9fa;
+}
+
+.year-select:focus,
+.month-select:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-weekday {
+    padding: 0.875rem 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #495057;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    border: 1px solid #e8ecef;
+}
+
+.calendar-weekday:first-child {
+    color: #dc3545;
+}
+
+.calendar-weekday:last-child {
+    color: #1e88e5;
+}
+
+.calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.calendar-day {
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    background: white;
+}
+
+.calendar-day:hover {
+    background: #f8f9fa;
+    border-color: #e8ecef;
+}
+
+.calendar-day.has-payment {
+    background: #e3f2fd;
+    color: #2c3e50;
+    border: 2px solid #90caf9;
+    position: relative;
+}
+
+.calendar-day.has-payment:hover {
+    background: #bbdefb;
+    border-color: #1e88e5;
+}
+
+.calendar-day.today {
+    border: 2px solid #1e88e5;
+    background: #e3f2fd;
+    font-weight: 600;
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+    background: #fafafa;
+}
+
+/* ============================================
+   분석 차트
+   ============================================ */
+.analytics-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.chart-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: relative;
+    height: 400px;
+    border: 1px solid #e8ecef;
+}
+
+.chart-container h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+    margin: 0;
+}
+
+.period-selector {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.period-selector select {
+    padding: 0.625rem 1.25rem;
+    border: 2px solid #e8ecef;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e88e5' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+    min-width: 140px;
+}
+
+.period-selector select:hover {
+    border-color: #1e88e5;
+    background-color: #f8f9fa;
+}
+
+.period-selector select:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+.chart-container canvas {
+    max-height: 300px;
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* ============================================
+   분석 요약 정보
+   ============================================ */
+.analytics-summary {
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8ecef;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-color: #1e88e5;
+}
+
+.summary-card h3 {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.summary-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e88e5;
+    margin: 0;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.analytics-grid h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.savings-opportunities,
+.subscription-durations {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8ecef;
+}
+
+.opportunities-list,
+.duration-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.opportunity-card {
+    background: #f8f9fa;
+    padding: 1.25rem;
+    border-radius: 10px;
+    border-left: 4px solid #1e88e5;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.opportunity-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.opportunity-card.yearly {
+    border-left-color: #28a745;
+}
+
+.opportunity-card.unused {
+    border-left-color: #ffc107;
+}
+
+.opportunity-card.integration {
+    border-left-color: #17a2b8;
+}
+
+.opportunity-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.opportunity-header i {
+    color: #1e88e5;
+    font-size: 1.1rem;
+}
+
+.opportunity-type {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.priority-badge {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.opportunity-content {
+    color: #495057;
+}
+
+.opportunity-message {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.yearly-comparison,
+.unused-info,
+.integration-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.comparison-item,
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e8ecef;
+}
+
+.comparison-item:last-child,
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.comparison-item .label,
+.info-item .label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.comparison-item .amount,
+.info-item .amount {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.comparison-item .amount.discount-rate {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.info-item .reason,
+.info-item .services,
+.info-item .suggestion {
+    color: #495057;
+    font-size: 0.9rem;
+    text-align: right;
+    max-width: 60%;
+}
+
+.savings-amount {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+}
+
+.no-opportunities {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+    font-style: italic;
+}
+
+.duration-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #1e88e5;
+    margin-bottom: 0.75rem;
+}
+
+.duration-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.subscription-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.duration-months {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.duration-months.long-term {
+    background: #28a745;
+    color: white;
+}
+
+.duration-months.medium-term {
+    background: #ffc107;
+    color: #333;
+}
+
+.duration-months.short-term {
+    background: #e3f2fd;
+    color: #1e88e5;
+}
+
+.duration-bar {
+    height: 8px;
+    background: #e8ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.duration-progress {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+
+.duration-progress.long-term {
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.duration-progress.medium-term {
+    background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+}
+
+.duration-progress.short-term {
+    background: linear-gradient(90deg, #1e88e5 0%, #1565c0 100%);
+}
+
+.duration-amount {
+    text-align: right;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   모달
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* 결제 일정 상세 모달 */
+.day-payments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.payment-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #1e88e5;
+    transition: all 0.2s;
+}
+
+.payment-detail:hover {
+    background: #e9ecef;
+    transform: translateX(4px);
+}
+
+.payment-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.payment-info i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.payment-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.payment-amount {
+    font-weight: 700;
+    color: #1e88e5;
+    font-size: 1.1rem;
+}
+
+.day-total {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.payments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.4rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border-left-width: 2px;
+    border-left-style: solid;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    pointer-events: none;
+}
+
+.payment-item i {
+    font-size: 0.75rem;
+    width: 12px;
+    text-align: center;
+}
+
+.payment-item .payment-name {
+    flex: 1;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+}
+
+.payment-item .payment-amount {
+    font-weight: 600;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* ============================================
+   알림 (Notification)
+   ============================================ */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 10002;
+    min-width: 300px;
+    max-width: 500px;
+    animation: slideInRight 0.3s ease-out;
+    border-left: 4px solid #1e88e5;
+}
+
+.notification.success {
+    border-left-color: #28a745;
+}
+
+.notification.error {
+    border-left-color: #dc3545;
+}
+
+.notification.warning {
+    border-left-color: #ffc107;
+}
+
+.notification div {
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.notification div:first-child {
+    margin-bottom: 0.75rem;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   폼 요소
+   ============================================ */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+/* ============================================
+   뉴스 섹션
+   ============================================ */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.news-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.news-category-filter {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-filter-btn {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid #e8ecef;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.category-filter-btn:hover {
+    border-color: #1e88e5;
+    color: #1e88e5;
+    background: #e3f2fd;
+}
+
+.category-filter-btn.active {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    border-color: #1e88e5;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+}
+
+.news-content {
+    min-height: 400px;
+}
+
+.news-loading,
+.news-empty,
+.news-error {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.news-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e8ecef;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #1e88e5;
+}
+
+.news-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.news-category-badge {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.news-date {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.news-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.news-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.news-title a:hover {
+    color: #1e88e5;
+}
+
+.news-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.news-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e8ecef;
+}
+
+.news-source {
+    color: #999;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.news-link {
+    color: #1e88e5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+
+.news-link:hover {
+    color: #1565c0;
+}
+
+.news-link i {
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   반응형 디자인
+   ============================================ */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .subscription-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .news-category-filter {
+        gap: 0.5rem;
+    }
+    
+    .category-filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .calendar-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .month-year-selector {
+        order: 2;
+        width: 100%;
+    }
+    
+    .calendar-header button {
+        order: 1;
+    }
+    
+    .calendar-weekdays {
+        gap: 0.25rem;
+    }
+    
+    .calendar-weekday {
+        font-size: 0.85rem;
+        padding: 0.625rem 0.5rem;
+        min-height: 40px;
+    }
+    
+    .calendar-week {
+        gap: 0.25rem;
+    }
+    
+    .calendar-day {
+        min-height: 50px;
+        padding: 0.5rem;
+    }
+    
+    .year-select,
+    .month-select {
+        min-width: 100px;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .period-selector {
+        flex-wrap: wrap;
+    }
+    
+    .period-selector select {
+        min-width: 120px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .login-card {
+        padding: 2rem 1.5rem;
+    }
+}

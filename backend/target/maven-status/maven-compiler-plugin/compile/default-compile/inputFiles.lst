@@ -1,0 +1,16 @@
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/controller/AuthController.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/BillingCycle.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/SubscriptionCategory.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/SmartSubscriptionApplication.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/controller/ExchangeRateController.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/controller/NewsController.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/controller/SubscriptionController.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/service/JsonFileService.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/TransactionType.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/Subscription.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/BankAccount.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/User.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/config/WebConfig.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/Transaction.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/controller/DebugController.java
+/Users/bagseongmin/Desktop/3학년 2학기/웹프로그래밍/TP/backend/src/main/java/com/smartsubscription/model/SubscriptionStatus.java
